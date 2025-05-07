@@ -1,0 +1,1 @@
+class Jogador(val nickname: String, val time: List<Pokemon>)
