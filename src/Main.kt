@@ -140,7 +140,7 @@ fun criarJogador(numero: Int, listaPokemons: List<Pokemon>): Jogador {
 
         if (escolha != null && escolha in mapaPokemons.keys) {
             if (!time.containsKey(escolha)) {
-                time[escolha] = mapaPokemons[escolha]!!.copy() // Faz uma cópia do Pokémon para evitar modificar o original
+                time[escolha] = mapaPokemons[escolha]!!.copy()
             } else {
                 println("Você já escolheu esse Pokémon. Escolha outro.")
             }
@@ -149,5 +149,5 @@ fun criarJogador(numero: Int, listaPokemons: List<Pokemon>): Jogador {
         }
     }
 
-    return Jogador(nome, time.values.toList())  // Converte o mapa de volta para lista de Pokémons
+    return Jogador(nome, time.values.toList())
 }
