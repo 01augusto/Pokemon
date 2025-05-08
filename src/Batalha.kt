@@ -64,6 +64,11 @@ class Batalha(private val p1: Jogador, private val p2: Jogador) {
         val danoBase = atacante.ataque - (defensor.defesa / 2)
         val dano = (if (danoBase > 0) danoBase else 1) * fator
         defensor.hp -= dano.toInt()
+        println("BATALHANDO")
+        for (i in 1..3) {
+            print(".")
+            Thread.sleep(1000)
+        }
         println("${atacante.nome} atacou ${defensor.nome} causando ${dano.toInt()} de dano (x$fator)")
     }
 
@@ -82,5 +87,5 @@ class Batalha(private val p1: Jogador, private val p2: Jogador) {
             }
         }
         return 1.0
-        }
+    }
 }
